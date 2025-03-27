@@ -1,0 +1,44 @@
+Sample Output 1 (Correct Guess):
+
+
+Guess a name from the list: Alice, Bob, Charlie, David, Eve: Bob
+Congratulations! You guessed it right.
+
+
+Sample Output 2 (Wrong Guess):
+
+
+
+Guess a name from the list: Alice, Bob, Charlie, David, Eve: Charlie
+Sorry, that's not correct. Try again!
+
+
+..................................................
+
+
+Solution
+
+
+
+import random
+
+# Step 1: Define a function to play the game
+def guess_name():
+    # List of names
+    names = ["Alice", "Bob", "Charlie", "David", "Eve"]
+
+    # Step 2: Pick a random name from the list
+    secret_name = random.choice(names)
+
+    # Step 3: Ask the user to guess the name
+    guess = input("Guess a name from the list: Alice, Bob, Charlie, David, Eve: ")
+
+    # Step 4: Check if the guess is correct
+    if guess == secret_name:
+        print("Congratulations! You guessed it right.")
+    else:
+        print("Sorry, that's not correct. Try again!")
+
+# Step 5: Run the function
+guess_name()
+
